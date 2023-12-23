@@ -9,7 +9,7 @@
 const gameVer = '1.0.0';
 
 const { setHook } = require('./libYuzu.js');
-const mainHandler = trans.send(handler, '200+');
+const mainHandler = trans.send(handler);
 
 setHook({
     '1.0.0': {
