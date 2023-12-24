@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         [01003BD013E30000]Kanda Alice mo Suiri Suru.
+// @name         [01003BD013E30000] Kanda Alice mo Suiri Suru.
 // @version      1.0.0
 // @author       emilybrooks
 // @description  Yuzu
