@@ -22,5 +22,9 @@ function handler(regs) {
     const address = regs[0].value;
     const len = address.add(0x10).readU16() * 2;
     let text = address.add(0x14).readUtf16String(len);
+    text = text.replace(/\[dic.*?text=/g, ''); // dictionary words
+    text = text.replace(/\[|'.*?\]/g, ''); // ruby text
+    text = text.replace(/\]/g, ''); // closing brace if no ruby text
+    text = text.replace(/\s|　/g, ''); // remove whitespace
     return text;
 }
