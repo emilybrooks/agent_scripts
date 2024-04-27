@@ -13,7 +13,8 @@ const mainHandler = trans.send(handler);
 
 setHook({
     '1.0.0': {
-        [0x8180de40 - 0x80004000]: mainHandler,
+        [0x8180de40 - 0x80004000]: mainHandler, // text box
+        [0x816b61c0 - 0x80004000]: mainHandler, // dictionary
     }
 }[globalThis.gameVer = globalThis.gameVer ?? gameVer]);
 
